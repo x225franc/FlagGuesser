@@ -4,7 +4,7 @@
 			<div class="col-md-6">
 				<div class="card shadow-lg">
 					<div class="card-header bg-primary text-white text-center">
-						<h1 class="mb-0">🏁 Devine le drapeau</h1>
+						<h1 class="mb-0">🏁 FlagGuesser</h1>
 					</div>
 					<div class="card-body text-center">
 						<p class="lead">
@@ -19,7 +19,7 @@
 								type="number"
 								class="form-control form-control-lg text-center"
 								v-model.number="questionCount"
-								min="1"
+								min="5"
 								max="20"
 							/>
 						</div>

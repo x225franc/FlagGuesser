@@ -27,12 +27,12 @@
 							<NuxtLink to="/" class="btn btn-primary btn-lg">
 								🔄 Rejouer
 							</NuxtLink>
-							<button
+							<!-- <button
 								@click="quizStore.reset()"
 								class="btn btn-outline-secondary"
 							>
 								📊 Réinitialiser les scores
-							</button>
+							</button> -->
 						</div>
 					</div>
 				</div>
@@ -60,14 +60,14 @@
 									</div>
 								</div>
 								<div class="col-md-9">
-									<div class="row">
-										<div class="col-sm-6">
+									<div class="row answer-details">
+										<div class="col-sm-6 mb-2">
 											<strong>Bonne réponse :</strong>
 											<div class="text-success fw-bold">
 												{{ detail.question.correct }}
 											</div>
 										</div>
-										<div class="col-sm-6">
+										<div class="col-sm-6 mb-2">
 											<strong>Votre réponse :</strong>
 											<div
 												:class="
@@ -153,6 +153,15 @@
 		.flag-small {
 			width: 60px;
 			height: 45px;
+		}
+		
+		/* Centre les réponses en version mobile */
+		.answer-details {
+			text-align: center;
+		}
+		
+		.answer-details .col-sm-6 {
+			width: 100%;
 		}
 	}
 </style>
