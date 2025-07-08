@@ -30,8 +30,7 @@ export const useQuizStore = defineStore("quiz", {	state: (): QuizState => ({
 		answers: [],
 		answerDetails: [],
 	}),
-	actions: {
-		setQuestions(questions: Question[]) {
+	actions: {		setQuestions(questions: Question[]) {
 			this.questions = questions;
 			this.total = questions.length;
 			this.currentIndex = 0;

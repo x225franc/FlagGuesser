@@ -1,6 +1,6 @@
 <template>
-	<div class="container">
-		<div class="row justify-content-center">
+	<div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+		<div class="row justify-content-center w-100 py-4">
 			<div class="col-lg-8">
 				<div class="card shadow-lg mb-4">
 					<div class="card-header bg-success text-white text-center">
@@ -163,5 +163,12 @@
 		.answer-details .col-sm-6 {
 			width: 100%;
 		}
+	}
+	
+	/* Styles supplémentaires pour le centrage vertical */
+	:deep(.container) {
+		min-height: 100vh;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 </style>

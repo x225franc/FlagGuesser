@@ -15,6 +15,21 @@
 
 	#app {
 		min-height: 100vh;
-		padding: 2rem 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#app > div {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	.nuxt-layout, .nuxt-page {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
 	}
 </style>
