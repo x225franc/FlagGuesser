@@ -22,7 +22,8 @@ export interface QuizState {
 	answerDetails: AnswerDetail[];
 }
 
-export const useQuizStore = defineStore("quiz", {	state: (): QuizState => ({
+export const useQuizStore = defineStore("quiz", {
+	state: (): QuizState => ({
 		questions: [],
 		currentIndex: 0,
 		score: 0,
@@ -30,7 +31,8 @@ export const useQuizStore = defineStore("quiz", {	state: (): QuizState => ({
 		answers: [],
 		answerDetails: [],
 	}),
-	actions: {		setQuestions(questions: Question[]) {
+	actions: {
+		setQuestions(questions: Question[]) {
 			this.questions = questions;
 			this.total = questions.length;
 			this.currentIndex = 0;
@@ -41,7 +43,7 @@ export const useQuizStore = defineStore("quiz", {	state: (): QuizState => ({
 		answer(choice: string) {
 			const current = this.questions[this.currentIndex];
 			const isCorrect = choice === current.correct;
-			
+
 			this.answers.push(choice);
 			this.answerDetails.push({
 				question: current,
@@ -49,7 +51,7 @@ export const useQuizStore = defineStore("quiz", {	state: (): QuizState => ({
 				isCorrect,
 				questionIndex: this.currentIndex + 1,
 			});
-			
+
 			if (isCorrect) {
 				this.score++;
 			}
