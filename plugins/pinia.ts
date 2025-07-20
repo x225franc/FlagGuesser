@@ -4,9 +4,9 @@ import { createPinia } from "pinia";
 export default defineNuxtPlugin((nuxtApp) => {
 	const pinia = createPinia();
 	if (process.client) {
-		const piniaPluginPersistedstate =
-			require("pinia-plugin-persistedstate").default;
-		pinia.use(piniaPluginPersistedstate);
+		import("pinia-plugin-persistedstate").then((module) => {
+			pinia.use(module.default);
+		});
 	}
 	nuxtApp.vueApp.use(pinia);
 });

@@ -7,7 +7,7 @@ Un jeu interactif développé en **Nuxt 3** avec **TypeScript** où vous devez d
 
 - **Quiz personnalisable** : Choisissez le nombre de questions (1-20)
 - **Interface moderne** : Design responsive avec Bootstrap 5
-- **Sauvegarde locale** : Vos scores sont conservés dans le navigateur
+- **Sauvegarde locale** : Les scores sont conservés dans le navigateur
 - **Progression en temps réel** : Barre de progression et score en direct
 - **API REST Countries** : Plus de 200 drapeaux du monde entier
 
@@ -63,26 +63,18 @@ npm run build
 ├── components/
 │   └── ChoiceSelector.vue          # Composant de sélection (v-model, props, events)
 ├── composables/
-│   └── useQuiz.ts                  # Logique métier et appel API
+│   └── useQuiz.ts                  # Logique métier et appel API drapeaux
 ├── pages/
 │   ├── index.vue                   # Page d'accueil
 │   ├── quiz.vue                    # Page de jeu
 │   └── result.vue                  # Page de résultats
 ├── plugins/
-│   ├── bootstrap.client.ts         # Configuration Bootstrap
-│   └── pinia.ts                    # Configuration Pinia avec persistance
+│   ├── bootstrap.ts                 # Configuration Bootstrap
+│   └── pinia.ts                     # Configuration Pinia avec persistance
 ├── stores/
 │   └── quiz.ts                     # Store Pinia pour l'état du jeu
 └── app.vue                         # Layout principal
 ```
-
-## 🎨 Interface utilisateur
-
-- **Design moderne** avec dégradés et ombres
-- **Responsive** - Adapté mobile et desktop
-- **Feedback visuel** - Animations et transitions fluides
-- **Code couleur** - Vert/Orange/Rouge selon les performances
-- **Icons & Emojis** - Interface ludique et engageante
 
 ## 📊 Système de scoring
 
